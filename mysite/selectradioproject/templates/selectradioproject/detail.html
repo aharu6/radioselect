@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail</title>
+  </head>
+  <body>
+    <h1>{{ question.question_text }}</h1>
+    {%if question.id%}
+    <form action="{% url 'selectradioproject:vote' question.id %}" method="post">
+      {% csrf_token %}
+      <fieldset>
+          {% if error_message %}
+          <p><strong>{{ error_message }}</strong></p>
+          {% endif %}
+          {% for choice in question.choice_set.all %}
+              <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+              <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+          {% endfor %}
+      </fieldset>
+      <input type="submit" value="Select">
+      </fieldset>
+    </form> 
+    {%else%}
+    <p>No question available.</p>
+    {%endif%}
+
+  </body>
+</html>
