@@ -1,24 +1,31 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{% static 'selectradioproject/style.css'%}"
+      type="text/css"
+    />
     <title>Index</title>
   </head>
   <body>
-    <h1>SelectradioProject</h1>
+    <div class="title">
+      <h1 class="index">SelectradioProgram</h1>
+      <img
+        src="{% static 'selectradioproject/svg/redhair-svgrepo-com.svg'%}"
+        alt="Red Hair SVG"
+        id="redhair"
+      />
+    </div>
     {% if latest_question_list %}
     <ul>
       {% for question in latest_question_list %}
-      <li>
-        <a href="{% url 'selectradioproject:detail' question.id %}"
-          >{{ question.question_text }}</a
-        >
-      </li>
-      {% endfor %}
-    </ul>
-    {% else %}
-    <p>No selectradioproject available</p>
-    {% endif %}
-  </body>
-</html>
+
+      <div class="question_box">
+        <button class="question">
+          <span class="crayon">
+            <a href="{% url 'selectradioproject:detail' question.id %}"
+              >{{ question.question_text

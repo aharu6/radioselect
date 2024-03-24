@@ -1,11 +1,18 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-widtj" ,initial-scale="1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{% static 'selectradioproject/style.css'%}"
+      type="text/css"
+    />
     <title>Results</title>
   </head>
-  <body>
+  <body class="result_body">
+    {%if choice.id%}
     <h3>{{choice.choice_text}}</h3>
     {%for program in choice.program_set.all%}
     <p>{{program.program_text}}</p>
@@ -13,5 +20,6 @@
     <a href="{% url 'selectradioproject:detail' choice.id %}">
       select another choice
     </a>
-  </body>
-</html>
+    {%else%}
+    <p>No Choice available</p>
+    {%endif%
