@@ -29,4 +29,41 @@ fieldset {
   background-color: #e5e3da;
   box-shadow: 0px 0px 20px 20px #e5e3da;
 }
-.qu
+.question_box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.crayon {
+  box-shadow: 0px -6px 5px -5px #e5e3da inset, 0px 8px 4px -8px #e5e3da;
+}
+.question {
+  border: none;
+  height: 8vw;
+  width: 18vw;
+  font-size: medium;
+  margin: 0.2vw;
+}
+#redhair {
+  height: 10rem;
+  margin: 5rem;
+}
+.choice_text {
+  color: #e5e3da;
+}
+.submit {
+  background-color: #849d74;
+  height: 2.5rem;
+  width: 5rem;
+  border: none;
+  color: #e5e3da;
+  font-size: medium;
+  margin-top: 0.3rem;
+}
+.back {
+  font-size: medium;
+}
+.result_body {
+  flex-direction: column;
+}

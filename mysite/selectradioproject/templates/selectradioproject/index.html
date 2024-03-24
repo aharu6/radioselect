@@ -28,4 +28,15 @@
         <button class="question">
           <span class="crayon">
             <a href="{% url 'selectradioproject:detail' question.id %}"
-              >{{ question.question_text
+              >{{ question.question_text }}</a
+            >
+          </span>
+        </button>
+        {% endfor %}
+      </div>
+    </ul>
+    {% else %}
+    <p>No selectradioproject available</p>
+    {% endif %}
+  </body>
+</html>
