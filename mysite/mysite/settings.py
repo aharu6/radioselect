@@ -118,7 +118,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFIES_DIRS = [
-    BASE_DIR/"static",
+    BASE_DIR/"selectradioproject"/"static",
 ]
 STATIC_ROOT = BASE_DIR/"staticfiels"
 # Default primary key field type
