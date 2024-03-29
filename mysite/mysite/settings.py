@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$yczwxpq%^ml9(u8l^7yocvteae9_!z(!tcqj9g_-ty$5uoon8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -120,7 +120,7 @@ STATIC_URL = '/static/'
 STATICFIES_DIRS = [
     BASE_DIR/"selectradioproject"/"static",
 ]
-STATIC_ROOT = BASE_DIR/"staticfiels"
+STATIC_ROOT = BASE_DIR/'static'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 

@@ -4,13 +4,7 @@
   },
   "hosting": {
     "site": "selectradio",
-    "public": "selectradioproject/templates/selectradioproject",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
+    "public": "selectradioproject/static",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
 }
