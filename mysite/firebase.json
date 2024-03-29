@@ -3,12 +3,13 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "mysite",
+    "site": "selectradio",
+    "public": "selectradioproject/templates/selectradioproject",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",
-        "destination": "selectradioproject/template/selectradioproject/.html"
+        "destination": "/index.html"
       }
     ]
   }
