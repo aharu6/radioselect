@@ -1,0 +1,31 @@
+body {
+  background-color: #849d74;
+  display: flex;
+}
+h1 {
+  color: #849d74;
+
+  padding: 2rex;
+}
+h3 {
+  color: #e5e3da;
+}
+p {
+  color: #e5e3da;
+}
+a {
+  color: #e5e3da;
+  text-decoration: none;
+  padding: 15px;
+}
+button {
+  background-color: #849d74;
+}
+fieldset {
+  border: none;
+}
+.title {
+  justify-content: center;
+  background-color: #e5e3da;
+  box-shadow: 0px 0px 20px 20px #e5e3da;
+}
